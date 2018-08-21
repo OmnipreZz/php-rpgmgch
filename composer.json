@@ -1,0 +1,16 @@
+{
+    "name": "omni/php-rpgmgch",
+    "scripts": {
+        "test": "./vendor/bin/phpunit ./tests",
+        "start": "php -S localhost:8080"
+    },
+    "authors": [
+        {
+            "name": "Omniprezz",
+            "email": "geoffrey.frioli@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^6.5"
+    }
+}

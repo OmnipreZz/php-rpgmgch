@@ -17,17 +17,23 @@
     <table class="table">
       <thead class="text-danger">
         <th scope="col">Id</th>
-        <th scope="col">Email</th>
-        <th scope="col">Created at</th> 
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Expires At</th>  
       </thead>
     <?php
-    $users = require('users.php');
-    foreach ($users as $value) { ?>
+    $products = require('products.php');
+    foreach ($products as $value) { ?>
     <tbody>
         <tr>
           <td><?php echo $value->getId();?></td>
-          <td><?php echo $value->getMail();?></td>
-          <td><?php echo $value->getDate();?></td>
+          <td><?php echo $value->getName();?></td>
+          <td><?php echo $value->getPrice();?></td>
+          <td><?php echo (method_exists($value, 'getProduct') ? $value->getProduct() : ' ');?></td>
+          <td><?php echo (method_exists($value, 'getBrand') ? $value->getBrand() : ' ');?></td>
+          <td><?php echo (method_exists($value, 'getExpire') ? $value->getExpire() : ' ');?></td>
         </tr>
     </tbody>
     <?php } ?>

@@ -1,5 +1,5 @@
 
 <?php
-include 'userTable.php';
+include 'productTable.php';
 ?>
     

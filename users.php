@@ -1,9 +1,9 @@
 <?php
 
-require 'Client.php';
+require_once 'Client.php';
 
-$client1 = new Client('jojo', 'jojo@gmail.com');
-$client2 = new Client('yoyo', 'yoyo@gmail.com');
+$client1 = new Client('jojo@gmail.com');
+$client2 = new Client('yoyo@gmail.com');
 
 
 return [

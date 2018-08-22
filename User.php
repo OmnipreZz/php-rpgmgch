@@ -1,14 +1,21 @@
 <?php
 
 class User {
-    private $id;
-    private $email;
-    private $createAt;
+    protected static $count;
+    protected $id;
+    protected $email;
+    protected $createdAt;
 
-    public function __construct($newUser, $newMail) {
-        $this->id = $newUser;
+    public function __construct($newMail) {
+        self::$count++;
+        $this->setId(self::$count);
         $this->email = $newMail;
-        $this->createAt = date('d-m-y H:i:s');
+        $this->createdAt = date('d-m-y');
+    }
+
+    public function setId($n) {
+        $n = (string)$n;
+        $this->id = $n;
     }
 
     public function getId() {
@@ -20,6 +27,6 @@ class User {
     }
 
     public function getDate() {
-        return $this->createAt;
+        return $this->createdAt;
     }
 }

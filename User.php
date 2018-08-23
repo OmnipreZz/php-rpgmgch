@@ -10,7 +10,7 @@ class User {
         self::$count++;
         $this->setId(self::$count);
         $this->email = $newMail;
-        $this->createdAt = date('d-m-y');
+        $this->createdAt = date('Y-m-d');
     }
 
     public function setId($n) {

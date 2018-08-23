@@ -3,17 +3,17 @@
 require_once 'Product.php';
 
 class Vegetable extends Product {
-    protected $productName;
+    protected $productorName;
     protected $expiresAt;
 
-    public function __construct($nom, $prix, $produit, $expire) {
+    public function __construct($nom, $prix, $produc, $expire) {
         parent::__construct($nom, $prix);
-        $this->productName = $produit;
+        $this->productorName = $produc;
         $this->expiresAt = $expire;
     }
 
-    public function getProduct() {
-        return $this->productName;
+    public function getProductor() {
+        return $this->productorName;
     }
 
     public function getExpire() {
@@ -21,7 +21,7 @@ class Vegetable extends Product {
     }
 
     public function isFresh() {
-        $date = date('d-m-y');
+        $date = date('Y-m-d');
         if ($date > $this->expiresAt) {
             return false;
         } else {

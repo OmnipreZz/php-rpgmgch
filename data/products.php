@@ -1,8 +1,9 @@
 
 <?php
 
-require_once 'Vegetable.php';
-require_once 'Cloth.php';
+require_once __DIR__.'/../models/Product.php';
+require_once __DIR__.'/../models/Vegetable.php';
+require_once __DIR__.'/../models/Cloth.php';
 
 
 $vegetable1 = new Vegetable('tomates', 1, 'jojo', '2018-08-27');

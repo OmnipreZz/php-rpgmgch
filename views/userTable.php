@@ -10,8 +10,9 @@
 </head>
 <body>
 <h1>Clients</h1>
-
-
+<?php
+$users = require __DIR__.'/../data/users.php';
+?>
 <div class="container-fluid">
     <table class="table">
       <thead class="text-danger">
@@ -20,7 +21,6 @@
         <th scope="col">Created at</th> 
       </thead>
     <?php
-    $users = require('users.php');
     foreach ($users as $value) { ?>
     <tbody>
         <tr>

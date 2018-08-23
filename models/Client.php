@@ -1,7 +1,8 @@
 <?php
 
-require_once 'User.php';
-require_once 'Product.php';
+require __DIR__.'/User.php';
+require __DIR__.'/Product.php';
+
 
 class Client extends User {
 
@@ -12,7 +13,6 @@ class Client extends User {
         parent::__construct($newMail);
         $this->cart = [];
         $this->billAmount = 0;
-        
     }
 
     public function buy(Product $product) {

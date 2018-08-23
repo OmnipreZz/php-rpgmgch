@@ -2,7 +2,7 @@
 
 <?php
 
-require_once "./Vegetable.php";
+require_once __DIR__.'/../models/Vegetable.php';
 
 // pour tester !!  taper composer test dans la console !!
 class VegetableTest extends \PHPUnit\Framework\TestCase {

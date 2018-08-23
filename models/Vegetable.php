@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Product.php';
-
 class Vegetable extends Product {
     protected $productorName;
     protected $expiresAt;

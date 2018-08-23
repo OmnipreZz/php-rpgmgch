@@ -1,7 +1,7 @@
 
 <?php
 
-require_once "./Product.php";
+require_once __DIR__.'/../models/Product.php';
 
 // pour tester !!  taper composer test dans la console !!
 class ProductTest extends \PHPUnit\Framework\TestCase {

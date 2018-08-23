@@ -1,7 +1,7 @@
 
 <?php
 
-require "./User.php";
+require_once __DIR__.'/../models/User.php';
 
 // pour tester !!  taper composer test dans la console !!
 class UserTest extends \PHPUnit\Framework\TestCase {

@@ -10,8 +10,9 @@
 </head>
 <body>
 <h1>Produits</h1>
-
-
+<?php 
+$products = require __DIR__.('/../data/products.php');
+?>
 <div class="container-fluid">
     <table class="table">
       <thead class="text-danger">
@@ -23,8 +24,8 @@
         <th scope="col">Expires At</th>  
       </thead>
     <?php
-    $products = require('products.php');
-    foreach ($products as $value) { ?>
+    foreach ($products as $value) { 
+    ?>
     <tbody>
         <tr>
           <td><?php echo $value->getId();?></td>
@@ -37,7 +38,7 @@
     </tbody>
     <?php } ?>
     </table>
-</div>
+</div>  
 
 </body>
 </html>

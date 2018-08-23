@@ -12,15 +12,15 @@
 <h1>Factures</h1>
 
 <?php
-$users = require_once 'users.php';
-require_once 'products.php';
+$users = require __DIR__.'/data/users.php';
+require __DIR__.'/data/products.php';
 
 $client1->buy($vegetable1);
 $client2->buy($vegetable2);
 $client2->buy($cloth1);
 
 foreach ($users as $client) { 
-    var_dump($client)?>
+    // var_dump($client)?>
 
 <div class="container-fluid">
     <table class="table">

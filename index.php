@@ -12,8 +12,8 @@
 
 <h1>php-rpgmgch</h1>
 
-    <a href="./userTable.php">userTable</a>
-    <a href="./productTable.php">productTable</a>
+    <a href="./views/userTable.php">userTable</a>
+    <a href="./views/productTable.php">productTable</a>
     <a href="./testOrder.php">testOrder</a>
 </body>
 </html>

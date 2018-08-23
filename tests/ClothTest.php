@@ -3,7 +3,8 @@
 
 <?php
 
-require_once "./Cloth.php";
+require_once __DIR__.'/../models/Product.php';
+require_once __DIR__.'/../models/Cloth.php';
 
 // pour tester !!  taper composer test dans la console !!
 class ClothTest extends \PHPUnit\Framework\TestCase {

@@ -31,9 +31,9 @@ $products = require __DIR__.('/../data/products.php');
           <td><?php echo $value->getId();?></td>
           <td><?php echo $value->getName();?></td>
           <td><?php echo $value->getPrice().'€';?></td>
-          <td><?php echo (method_exists($value, 'getProductor') ? $value->getProductor() : ' ');?></td>
-          <td><?php echo (method_exists($value, 'getBrand') ? $value->getBrand() : ' ');?></td>
-          <td><?php echo (method_exists($value, 'getExpire') ? $value->getExpire() : ' ');?></td>
+          <td><?php echo (method_exists($value, 'getProductor') ? $value->getProductor() : 'none');?></td>
+          <td><?php echo (method_exists($value, 'getBrand') ? $value->getBrand() : 'none');?></td>
+          <td><?php echo (method_exists($value, 'getExpire') ? $value->getExpire() : 'none');?></td>
         </tr>
     </tbody>
     <?php } ?>

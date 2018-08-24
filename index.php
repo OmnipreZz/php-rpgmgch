@@ -15,6 +15,7 @@
     <a href="./views/userTable.php">userTable</a>
     <a href="./views/productTable.php">productTable</a>
     <a href="./testOrder.php">testOrder</a>
+    <a href="./views/shopping.php">shopping</a>
 </body>
 </html>
     

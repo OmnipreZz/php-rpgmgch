@@ -9,19 +9,20 @@
         crossorigin="anonymous">
 </head>
 <body>
-<h1>Factures</h1>
+<h1>testOrder</h1>
 
 <?php
-$users = require __DIR__.'/data/users.php';
-require __DIR__.'/data/products.php';
+$users = include __DIR__.'/data/users.php';
+$products = include __DIR__.'/data/products.php';
+
 
 $client1->buy($vegetable1);
 $client2->buy($vegetable2);
 $client2->buy($cloth1);
 
-foreach ($users as $client) { 
-    // var_dump($client)?>
 
+foreach ($users as $client) { 
+?>
 <div class="container-fluid">
     <table class="table">
         <thead class="text-danger">
@@ -32,7 +33,9 @@ foreach ($users as $client) {
         <tbody>
             <tr>
             <td><?php echo $client->getMail();?></td>
-            <td><?php echo $client->getCart();?></td>
+            <td><?php foreach ($client->getCart() as $value) {
+                    echo $value->getName().', ';
+            }?></td>
             <td><?php echo $client->getBill().'€';?></td>
             </tr>
         </tbody>

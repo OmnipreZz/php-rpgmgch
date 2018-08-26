@@ -9,18 +9,16 @@
         crossorigin="anonymous">
 </head>
 <body>
-<h1>Shopping</h1>
-
 <?php 
 $users = require __DIR__.('/../data/users.php');
 $products = require __DIR__.('/../data/products.php');
 ?>
-
-<form action="./validateOrder.php" method="POST">
+<h1 class="text-center mt-5">SHOP</h1>
+<form class="col-6 mx-auto p-3" action="./validateOrder.php" method="POST">
   <div class="form-group">
     <label for="client"></label>
-    <select class="form-control" name="client" id="client">
-    <option selected>Select Client</option>
+    <select class="form-control bg-light" name="client" id="client">
+    <option selected disabled hidden>Select Client</option>
     <?php
     foreach ($users as $client) { 
         echo '<option value="'.$client->getId().'">'.$client->getMail().'</option>';
@@ -29,8 +27,8 @@ $products = require __DIR__.('/../data/products.php');
   </div>
   <div class="form-group">
     <label for="product1"></label>
-    <select class="form-control" name ="product1" id="product1">
-      <option selected>Select Product</option>
+    <select class="form-control bg-light" name ="product1" id="product1">
+      <option selected disabled hidden>Select Product</option>
       <?php
     foreach ($products as $value) { 
         echo '<option value="'.$value->getId().'">'.$value->getName().'</option>';
@@ -39,8 +37,8 @@ $products = require __DIR__.('/../data/products.php');
   </div>
   <div class="form-group">
     <label for="product2"></label>
-    <select class="form-control" name="product2" id="product2">
-      <option selected>Select Product</option>
+    <select class="form-control bg-light" name="product2" id="product2">
+      <option selected disabled hidden>Select Product</option>
        <?php
     foreach ($products as $value) { 
         echo '<option value="'.$value->getId().'">'.$value->getName().'</option>';
@@ -49,15 +47,17 @@ $products = require __DIR__.('/../data/products.php');
   </div>
   <div class="form-group">
     <label for="product3"></label>
-    <select class="form-control" name ="product3" id="product3">
-    <option>Select Product</option>
+    <select class="form-control bg-light" name ="product3" id="product3">
+    <option selected disabled hidden>Select Product</option>
        <?php
     foreach ($products as $value) { 
         echo '<option value="'.$value->getId().'">'.$value->getName().'</option>';
     } ?>
     </select>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="text-center">
+  <button type="submit" class="btn btn-danger mt-3">Submit</button>
+  </div>
 </form>
 
 

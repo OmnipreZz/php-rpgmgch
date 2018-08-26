@@ -1,7 +1,8 @@
 <?php
 
 class Cloth extends Product {
-    protected $brand;
+
+    private $brand;
 
     public function __construct($nom, $prix, $marque) {
         parent::__construct($nom, $prix);

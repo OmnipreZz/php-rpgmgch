@@ -6,13 +6,9 @@ require __DIR__.'/Product.php';
 
 class Client extends User {
 
-    protected $cart = [];
-    protected $billAmount;
-    
-    public function __contruct($newMail) {
-        parent::__construct($newMail);
-        $this->billAmount = 0;
-    }
+    private $cart = [];
+    private $billAmount = 0;
+
 
     public function buy(Product $product) {
         $this->addProductToCart($product);

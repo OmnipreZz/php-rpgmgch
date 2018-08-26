@@ -1,8 +1,8 @@
 <?php
 
 class Vegetable extends Product {
-    protected $productorName;
-    protected $expiresAt;
+    private $productorName;
+    private $expiresAt;
 
     public function __construct($nom, $prix, $produc, $expire) {
         parent::__construct($nom, $prix);

@@ -13,7 +13,9 @@
 <?php
 include "./navbar.php";
 ?>
-<h1 class="text-center mt-5 pt-5">Hello, welcome to my shop !!</h1>
+<h1 class="text-center mt-5 pt-5">Thank you !!</h1>
+<div class="text-center mt-5 pt-4">
+<a class="btn btn-danger mt-3 text-white" href="./shopping.php">Buy Again</a>
+</div>
 </body>
 </html>
-    

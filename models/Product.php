@@ -1,10 +1,10 @@
 <?php
 
 class Product {
-    protected static $count;
-    protected $id;
-    protected $name;
-    protected $price;
+    private static $count;
+    private $id;
+    private $name;
+    private $price;
 
     public function __construct($nom, $prix) {
         self::$count++;

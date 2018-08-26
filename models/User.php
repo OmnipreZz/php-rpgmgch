@@ -1,10 +1,10 @@
 <?php
 
 class User {
-    protected static $count;
-    protected $id;
-    protected $email;
-    protected $createdAt;
+    private static $count;
+    private $id;
+    private $email;
+    private $createdAt;
 
     public function __construct($newMail) {
         self::$count++;
